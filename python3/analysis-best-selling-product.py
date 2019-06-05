@@ -1,6 +1,5 @@
 import pandas as pd
 import json
-from pprint import pprint
 
 order_items = list()
 with open("./order.json", "rb") as fin:
@@ -25,7 +24,4 @@ units_by_sku_sorted = (
     .sort_values(by="units", ascending=False)
 )
 
-print(units_by_sku_sorted)
-units_by_sku_sorted.to_csv('./units_by_sku.csv')
-
-
+units_by_sku_sorted.to_csv("./units_by_sku.csv")
